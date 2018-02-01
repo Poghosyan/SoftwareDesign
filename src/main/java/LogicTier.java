@@ -6,7 +6,7 @@
 
 public class LogicTier {
 
-	private DataTier dataTier; // link to the Data Tier
+	private DataTier dataTier;
 	
 	public LogicTier(DataTier dataTier) {
 		this.dataTier = dataTier;

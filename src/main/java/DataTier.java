@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DataTier {
 
-	private String fileName; // the name of the file to read
+	private String fileName;
 	
 	public DataTier(String inputSource) {
 		fileName = inputSource;
