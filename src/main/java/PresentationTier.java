@@ -7,20 +7,6 @@
 
 public class PresentationTier {
 
-	/* TODO:
-	showBookTitlesByAuthor: using the command-line (i.e., reading from System.in), ask the user to enter part or all of
-	an author’s name, then display (using System.out) the titles of those books whose author name includes the input
-	name.
-
-	showNumberOfBooksInYear: using the command-line (i.e., reading from System.in), ask the user to enter a year, then
-	display (using System.out) the number of books published in that year
-
-	 showBookTitlesByAuthor should look for partial matches and should ignore case, i.e. be case-insensitive. The
-	 titles of the books that are returned/displayed should be sorted based on the year they were published in
-	 non-descending order; if two or more books have the same publication year, those books should be sorted
-	 alphabetically.
-	 */
-
 	private LogicTier logicTier; // link to the Logic Tier
 	
 	public PresentationTier(LogicTier logicTier) {
@@ -35,6 +21,26 @@ public class PresentationTier {
 	public void start() {
 		
 	}
-	
 
+	/**
+	 * using the command-line (i.e., reading from System.in), ask the user to enter part or all of
+	 * an author’s name, then display (using System.out) the titles of those books whose author name includes the input
+	 * name.
+	 *
+	 * showBookTitlesByAuthor should look for partial matches and should ignore case, i.e. be case-insensitive. The
+	 * titles of the books that are returned/displayed should be sorted based on the year they were published in
+	 * non-descending order; if two or more books have the same publication year, those books should be sorted
+	 * alphabetically.
+	 */
+	public void showBookTitlesByAuthor() {
+
+	}
+
+	/**
+	 * using the command-line (i.e., reading from System.in), ask the user to enter a year, then
+	 * display (using System.out) the number of books published in that year
+	 */
+	public void showNumberOfBooksInYear() {
+
+	}
 }

@@ -6,19 +6,29 @@
 
 public class LogicTier {
 
-	/*
-	findBookTitlesByAuthor: for a given name, search through all of the books and return the titles of those books whose
-	author name includes the input name.
-
-	findNumberOfBooksInYear: for a given year, search through all of the books and return the number of books published
-	in that year
-	 */
-
 	private DataTier dataTier; // link to the Data Tier
 	
 	public LogicTier(DataTier dataTier) {
 		this.dataTier = dataTier;
 	}
-	
 
+    /**
+     * for a given name, search through all of the books and return the titles of those books whose
+     * author name includes the input name.
+     * @param bookName
+     * @return
+     */
+	public String[] findBookByAuthor(String bookName) {
+		return null;
+	}
+
+    /**
+     * for a given name, search through all of the books and return the titles of those books whose
+     * author name includes the input name.
+     * @param year
+     * @return
+     */
+	public int findNumberOfBooksInYear(int year) {
+		return 0;
+	}
 }
