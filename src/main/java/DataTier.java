@@ -4,9 +4,7 @@
  * Implement the appropriate methods for this tier below.
  */
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class DataTier {
@@ -25,11 +23,19 @@ public class DataTier {
 	 * @return
 	 */
 	public List<Book> getAllBooks() {
-		FileInputStream reader = null;
-
+		FileReader reader = null;
+		BufferedReader bufferedReader = null;
+		String line;
 		try {
-			reader = new FileInputStream(fileName);
+			reader = new FileReader(fileName);
+			bufferedReader = new BufferedReader(reader);
+
+			while ((line = bufferedReader.readLine()) != null) {
+				System.out.println(line);
+			}
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			if (reader != null) {
