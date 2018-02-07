@@ -5,6 +5,7 @@
  */
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataTier {
@@ -26,12 +27,16 @@ public class DataTier {
 		FileReader reader = null;
 		BufferedReader bufferedReader = null;
 		String line;
+		List<Book> books = null;
+
 		try {
 			reader = new FileReader(fileName);
 			bufferedReader = new BufferedReader(reader);
-
+            books = new ArrayList<Book>();
 			while ((line = bufferedReader.readLine()) != null) {
-				System.out.println(line);
+				String[] tokens = line.split("\t");
+				Book currentBook = new Book(tokens[0], tokens[1], Integer.parseInt(tokens[2]));
+				books.add(currentBook);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -46,6 +51,7 @@ public class DataTier {
 				}
 			}
 		}
-		return null;
+
+		return books;
 	}
 }
