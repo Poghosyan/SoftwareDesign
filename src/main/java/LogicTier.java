@@ -21,7 +21,7 @@ public class LogicTier {
      * @param authorName
      * @return
      */
-	public String[] findBookByAuthor(String authorName) {
+	public String[] findBookTitlesByAuthor(String authorName) {
 	    if (authorName == null || authorName.isEmpty()) {
 	        return null;
         }

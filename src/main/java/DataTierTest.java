@@ -14,7 +14,7 @@ public class DataTierTest {
     }
 
     @Test
-    public void getAllBooks() {
+    public void getAllBooksTest() {
         List<Book> result = dataTier.getAllBooks();
         assertFalse(result == null);
     }
