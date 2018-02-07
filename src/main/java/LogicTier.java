@@ -4,6 +4,9 @@
  * Implement the appropriate methods for this tier below.
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LogicTier {
 
 	private DataTier dataTier;
@@ -15,20 +18,47 @@ public class LogicTier {
     /**
      * for a given name, search through all of the books and return the titles of those books whose
      * author name includes the input name.
-     * @param bookName
+     * @param authorName
      * @return
      */
-	public String[] findBookByAuthor(String bookName) {
-		return null;
+	public String[] findBookByAuthor(String authorName) {
+	    if (authorName == null || authorName.isEmpty()) {
+	        return null;
+        }
+
+		List<Book> booksByAuthor = new ArrayList<Book>();
+	    List<Book> books = dataTier.getAllBooks();
+
+	    for (Book curr : books) {
+	        if (curr.author.contains(authorName)) {
+	            booksByAuthor.add(curr);
+            }
+        }
+
+        String[] result = new String[booksByAuthor.size()];
+
+        for (int i = 0; i < result.length; ++i) {
+	        result[i] = booksByAuthor.get(i).getTitle();
+        }
+
+		return result;
 	}
 
     /**
-     * for a given name, search through all of the books and return the titles of those books whose
-     * author name includes the input name.
+     * using the command-line (i.e., reading from System.in), ask the user to enter a year, then display (using
+     * System.out) the number of books published in that year
      * @param year
      * @return
      */
 	public int findNumberOfBooksInYear(int year) {
-		return 0;
+        List<Book> books = dataTier.getAllBooks();
+        int count = 0;
+        for (Book curr : books) {
+            if (curr.getPublicationYear() == year) {
+                count++;
+            }
+        }
+
+		return count;
 	}
 }
