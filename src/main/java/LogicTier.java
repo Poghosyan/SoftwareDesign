@@ -45,8 +45,7 @@ public class LogicTier {
 	}
 
     /**
-     * using the command-line (i.e., reading from System.in), ask the user to enter a year, then display (using
-     * System.out) the number of books published in that year
+     * for a given year, search through all of the books and return the number of books published in that year
      * @param year
      * @return
      */
